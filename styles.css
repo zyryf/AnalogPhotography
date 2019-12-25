@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+    font-size: 10px;
+}
+
+body {
+    min-height: 100vh;
+
+}
+
+/* aside  */
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100vh;
+    background-color: #fff;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+aside .text {
+    padding: 50px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    background-color: rgba(0, 0, 0, 0.1);
+
+
+
+}
+
+aside .text h1 {
+    font-size: 5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+aside .text h2 {
+    font-size: 3rem;
+    font-weight: 100;
+
+}
+
+aside nav {
+    margin-top: 100px;
+}
+
+aside nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside nav ul li {
+
+
+    position: relative;
+    margin: 20px;
+    overflow: hidden;
+    border-bottom: 1px solid grey;
+}
+
+aside nav ul li a {
+    display: block;
+    padding: 20px;
+
+}
+
+
+aside nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transition: .5s;
+}
+
+aside nav ul li a:hover::after {
+    left: 0;
+}
+
+aside nav ul li a:hover {
+    color: black;
+    text-decoration: none;
+
+}
+
+
+
+
+aside nav ul li a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+    text-transform: uppercase;
+}
+
+aside footer p {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+main {
+    width: 75%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+img {
+    width: 100%;
+    transition: .2s;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 3%;
+}
+
+img:hover {
+    box-shadow: 0 0 10px black;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+
+}
+
+section {
+    font-family: 'Playfair Display', serif;
+
+}
+
+section h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 20px;
+
+}
+
+.row {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+
+@media (max-width:1400px) {
+
+    aside nav ul li {
+
+        margin: 0;
+
+    }
+
+    aside .text h1 {
+        font-size: 4rem;
+
+    }
+
+    aside .text h2 {
+        font-size: 2.5rem;
+
+
+    }
+
+    aside nav {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width:1200px) {
+    aside {
+        width: 32%;
+    }
+
+    main {
+        width: 68%;
+    }
+
+    .row {
+        margin: 10px;
+    }
+
+}
+
+@media (orientation:landscape) and (max-width:830px) {
+    aside {
+        height: 60vh;
+        width: 100%;
+        top: -60vh;
+        left: 0;
+        transition: 1s;
+        z-index: 1;
+
+    }
+
+
+    aside.active {
+        top: 0;
+
+    }
+
+    aside .text {
+        padding: 20px;
+    }
+
+    aside .text h1 {
+        font-size: 2.2rem;
+    }
+
+    aside .text h2 {
+        font-size: 1.4rem;
+    }
+
+    aside nav {
+        margin-top: 20px;
+    }
+
+    aside nav ul li a {
+        font-size: 1.4rem;
+    }
+
+    main {
+        width: 100%
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (orientation:landscape) and (max-width:825px) {
+    aside {
+        height: 100vh;
+        top: -100vh;
+    }
+
+    aside .text h1 {
+        font-size: 3rem;
+    }
+
+    aside .text h2 {
+        font-size: 1.5rem;
+    }
+
+    aside nav ul li a {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width:1024px) and (orientation:portrait) {
+    aside {
+        width: 100%;
+        height: 60vh;
+        top: -60vh;
+        left: 0;
+        transition: .5s;
+        z-index: 1;
+    }
+
+    aside.active {
+        top: 0;
+
+    }
+
+    aside nav ul li {
+
+        margin: 0;
+
+    }
+
+    aside .text h1 {
+        font-size: 5rem;
+    }
+
+    aside nav ul li a {
+        font-size: 3rem;
+    }
+
+    main {
+        width: 100vw;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+
+
+
+
+}
+
+@media(max-width:420px) and (orientation:portrait) {
+    aside {
+
+        height: 75vh;
+        top: -75vh;
+
+    }
+
+
+
+    aside .text h1 {
+        font-size: 3rem;
+    }
+
+    aside .text h2 {
+        font-size: 1.8rem;
+    }
+
+    aside nav ul li a {
+        font-size: 1.7rem;
+    }
+
+    aside nav {
+        margin-top: 30px;
+    }
+
+    main {
+        width: 100vw;
+
+    }
+
+    .row div {
+        margin: 20px;
+    }
+
+    .row {
+        padding: 10px 0px;
+    }
+
+    section h1 {
+        margin: 20px 0;
+    }
+
+    aside footer p {
+        margin: 25px;
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width:320px) and (orientation:portrait) {
+    aside nav {
+        margin-top: 10px;
+    }
+
+    aside {
+
+        height: 85vh;
+        top: -85vh;
+
+    }
+
+    section h1 {
+        font-size: 2.7rem;
+        margin-bottom: 0;
+    }
+
+    .hamburger-inner {
+        width: 30px;
+        height: 3px;
+    }
+
+    .hamburger-inner::after {
+        width: 30px;
+        height: 3px;
+    }
+
+    .hamburger-inner::before {
+        width: 30px;
+        height: 3px;
+    }
+
+    .hamburger-box {
+        width: 30px;
+    }
+
+
+}

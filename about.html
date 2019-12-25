@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap" rel="stylesheet">
+    <title>About</title>
+</head>
+
+<style>
+    .about {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .about img {
+        height: 30vh;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .about p {
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+
+    }
+
+
+    .about a {
+        border: 1px solid black;
+        font-size: 20px;
+        padding: 5px 10px;
+        background-color: transparent;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        display: block;
+        width: 100px;
+        margin: 0 auto;
+        margin-top: 60px;
+        position: relative;
+        transition: .5s;
+        overflow: hidden;
+    }
+
+    a::before {
+        content: "";
+        width: 122px;
+        height: 100%;
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+        left: -102%;
+        transition: .5s;
+        z-index: -1;
+    }
+
+    a:hover::before {
+        left: 0;
+    }
+
+    a:hover {
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="about">
+        <img src="img/vilia.png" alt="aparat">
+        <p>all photos raw</p>
+        <p>Vilia Analog 200 ISO Film</p>
+        <p>All rights reserved &copy</p>
+        <a href="index.html">home</a>
+    </div>
+</body>
+
+</html>
