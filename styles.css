@@ -358,6 +358,14 @@ section h1 {
         margin: 25px;
         font-size: 1.5rem;
     }
+
+    .hamburger {
+        position: absolute;
+        top: 20px;
+        left: 10px;
+    }
+
+
 }
 
 @media(max-width:320px) and (orientation:portrait) {
@@ -395,6 +403,8 @@ section h1 {
     .hamburger-box {
         width: 30px;
     }
+
+
 
 
 }
